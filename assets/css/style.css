@@ -188,6 +188,7 @@ footer {
   vertical-align: top;
   position: relative;
   width: 483px;
+  max-width: 100%;
 }
 
 .form-email {
@@ -213,6 +214,7 @@ footer {
   height: 100%;
   cursor: pointer;
   width: 164px;
+  max-width: 100%;
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-medium);
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
@@ -394,8 +396,33 @@ img {
   cursor: pointer;
 }
 
-@media screen and (max-width: 430px) {
-  
+@media screen and (min-width: 760px) {
+}
+
+@media screen and (min-width: 430px) {
+}
+
+@media screen and (min-width: 320px) {
+  header {
+    position: relative;
+  }
+
+  .btn-nav {
+    display: block;
+  }
+  .wrapper-nav {
+    display: none;
+  }
+
+  .wrapper-nav:hover,
+  .btn-nav:hover + .wrapper-nav {
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    padding-top: 2rem;
+  }
+
   .form {
     max-width: 374px;
   }
