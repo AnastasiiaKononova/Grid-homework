@@ -3,30 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Grid Layout</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/margin-lib.css">
     <link rel="stylesheet" href="./assets/css/flex-lib.css">
     <link rel="stylesheet" href="./assets/css/grid-lib.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/margin-lib.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <header class="px-1 py-2">
-        <div class="grid-container header-wrapper gap-5 align-items-center">
-            <div class="logo col-1">team.flow</div>
-            <button class="btn-nav"><i class="fa-solid fa-bars"></i></button>
-            <div class="align-items-center wrapper-nav">
-
-                <nav class="nav-menu justify-self-center">
-                    <ul>
+    <header class="grid pt-3 pb-6">
+        <div class="grid-container grid-header align-items-center">
+            <div class="logo">team.flow</div>
+            <button class="burger-nav"><i class="fa-solid fa-bars"></i></button>
+            <div class="menu-wrapper grid align-items-center">
+                <nav class="justify-self-center">
+                    <ul class="flex">
                         <li class="dropdown">
                             <a href="#">How it works<i class="fa-solid fa-angle-down"></i></a>
                             <ul class="dropdown-content">
@@ -51,228 +47,253 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header-links flex justify-end">
+                <div class="secondary-menu">
                     <a href="#">Log in</a>
                     <button class="btn-header">Get started free</button>
                 </div>
             </div>
-
         </div>
     </header>
-    <main>
-        <section class="hero pt-6">
-            <div class="grid-container">
-                <div class="promotion col-5 justify-self-center mb-1">
-                    <span class="sale px-1">Save 90%</span>
-                    <span class="price px-0-5">Get account of $59 ></span>
+    <main class="grid">
+        <section id="hero">
+            <div class="grid-container mb-6 hero-grid">
+                <div class="justify-self-center hero-badge">
+                    <span class="green-price">Save 90%</span>
+                    <span class="price">Get account of $59 <i class="fa-solid fa-angle-right"></i></span>
                 </div>
-                <h1 class="page-heading justify-self-center col-5">Manage the team everyone wants to be on</h1>
-                <p class="under-heading justify-self-center col-5">Simple platform that lets you master what great
-                    managers
-                    do best, as develop trust,
-                    collaborate, and
-                    drive tean performance</p>
-                <div class="col-5 justify-self-center ">
-                    <form class="form mb-3">
-                        <input type="email" class="form-email p-1" placeholder="name@yourcompany.com">
-                        <button type="submit" class="form-btn">Try it fee</button>
-                    </form>
-                </div>
-
-                <div class="col-5 justify-self-center px-5 mb-6">
+                <h1 class="justify-self-center hero-heading">
+                    Manage the team
+                    everyone wants to be on
+                </h1>
+                <p class="justify-self-center hero-subtitle">Simple platform that lets you master what great managers do
+                    best,
+                    as develop trust, collaborate, and drive team performance.</p>
+                <form class="justify-self-center flex subscribe mb-3">
+                    <input type="email" placeholder="name@yourcompany.com" name="email" />
+                    <input type="submit" name="submit" value="Try it free">
+                </form>
+                <div class="justify-self-center hero-img">
                     <img src="./assets/Graphic.png" alt="Statistic Overview">
                 </div>
-                <h3 class="title-partners col-5 justify-self-center mb-2">Trusted by over <span
-                        class="font-bold">10.000+</span>world's best teams
+            </div>
+        </section>
+        <section id="partners">
+            <div class="grid-container grid-partners mb-6">
+                <h3 class="justify-self-center partners-heading">
+                    TRUSTED BY OVER <b class="bold">10.000+</b> WORLD’S BEST TEAMS
                 </h3>
-                <div class="partners mb-6">
-                    <img src="./assets/google.png" alt="logo-Google" />
-                    <img src="./assets/airbnb.png" alt="logo-Airbnb" />
-                    <img src="./assets/Group.png" alt="logo-Facebook" />
-                    <img src="./assets/hubspot.png" alt="logo-Hubspot" />
-                    <img src="./assets/slack.png" alt="logo-Slack" />
+                <div class="justify-self-stretch partners align-items-center ">
+                    <img class="justify-self-center" src="./assets/google.png" alt="logo-Google" />
+                    <img class="justify-self-center" src="./assets/airbnb.png" alt="logo-Airbnb" />
+                    <img class="justify-self-center" src="./assets/Group.png" alt="logo-Facebook" />
+                    <img class="justify-self-center" src="./assets/hubspot.png" alt="logo-Hubspot" />
+                    <img class="justify-self-center" src="./assets/slack.png" alt="logo-Slack" />
                 </div>
             </div>
         </section>
-
-        <section class="work-flow py-4">
-            <div class="grid-container wrapper-ex-work ">
-                <div class="photo-work">
-                    <img src="./assets/Work-ex.png" alt="example of work">
-                </div>
-
-                <div class="advantage-1 px-2 py-1-5">
-                    <h3>Survey your team</h3>
-                    <p>
-                        Powerful questions that get to the heart of how team members really feel.
-                    </p>
-                </div>
-                <div class="border-bottom  px-2 py-1-5  ">
-                    <h3>Resolve issues quickly</h3>
-                    <p>
-                        Anonymous messaging that connects managers and employees.
-                    </p>
-                </div>
-                <div class="border-bottom  px-2 py-1-5">
-                    <h3> Plan your 1-on-1s</h3>
-                    <p>
-                        Plan meetings together and give a stake
-                        employees and teams.
-                    </p>
-                </div>
-                <div class="border-bottom  px-2 py-1-5">
-                    <h3>Track your progress</h3>
-                    <p>
-                        Easy-to-read reports and sharable results help managers and teams.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <section>
-            <div class="grid-container solutions">
-                <h2 class="col-3 justify-self-center mt-6 mb-4">Make your work easier</h2>
-                <div class="variety-solutins mb-5">
-                    <img src="./assets/Team-reports.png" alt="logo team surveys">
-                    <h3>Team Surveys & Reports</h3>
-                    <p>
-                        Short, anonymous surveys track your team’s needs weekly so you can focus.
-                    </p>
-                </div>
-
-                <div class="variety-solutins mb-5">
-                    <img src="./assets/Collaborative.png" alt="logo collaborative 1:1">
-                    <h3>Collaborative 1:1 </h3>
-                    <p>
-                        Build relationships by planning 1-on-1s and start meetings.
-                    </p>
-                </div>
-
-                <div class="variety-solutins mb-5">
-                    <img src="./assets/Learning-center.png" alt="logo Learning-center">
-                    <h3>Learning Center</h3>
-                    <p>
-                        Quickly get solutions tailored to your personal challenges from the manager.
-                    </p>
-                </div>
-
-                <div class="variety-solutins mb-6">
-                    <img src="./assets/Anonym-messaging.png" alt="logo anonymous messaging">
-                    <h3>Anonymous Messaging</h3>
-                    <p>
-                        Develop trust in a safe channel for important conversations.
-                    </p>
-                </div>
-
-                <div class="variety-solutins mb-6">
-                    <img src="./assets/Conversation.png" alt="logo conversation engine">
-                    <h3>Conversation Engine</h3>
-                    <p>
-                        Communicate confidently with recommended talking points.
-                    </p>
-                </div>
-
-                <div class="variety-solutins mb-6">
-                    <img src="./assets/Exclusive-manager.png" alt="logo exclusive manager">
-                    <h3>Team Surveys & Reports</h3>
-                    <p>
-                        Access manager tips, activities and best practices from our team of experts.
-                    </p>
+        <section id="workflow">
+            <div class="grid-container grid-workflow py-4">
+                <div class="photo-work"><img src="./assets/Work-ex.png" alt="example of work"></div>
+                <div class="possibilities">
+                    <div class="border-left py-1-5 px-2">
+                        <h3>Survey your team</h3>
+                        <p>
+                            Powerful questions that get to the heart of how team members really feel.
+                        </p>
+                    </div>
+                    <div class="border-bottom py-1-5 px-2 ">
+                        <h3>Resolve issues quickly</h3>
+                        <p>
+                            Anonymous messaging that connects managers and employees.
+                        </p>
+                    </div>
+                    <div class="border-bottom  py-1-5 px-2">
+                        <h3> Plan your 1-on-1s</h3>
+                        <p>
+                            Plan meetings together and give a stake
+                            employees and teams.
+                        </p>
+                    </div>
+                    <div class="border-bottom py-1-5 px-2">
+                        <h3>Track your progress</h3>
+                        <p>
+                            Easy-to-read reports and sharable results help managers and teams.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
+        <section id="advantages">
+            <div class="grid-container kinds-advantage my-6">
+                <h2 class="justify-self-center section-title mb-4">Make your work easier</h2>
+                <div class=" grid advantages ">
+                    <div class="description-advantage mb-5">
+                        <img src="./assets/Team-reports.png" alt="logo team surveys">
+                        <h3>Team Surveys & Reports</h3>
+                        <p>
+                            Short, anonymous surveys track your team’s needs weekly so you can focus.
+                        </p>
+                    </div>
 
-        <section class="shedule">
-            <div class="grid-container wrapper-shedule">
-                <div class="description-shedule py-8 px-0-5">
-                    <h2 class="mb-1-5 line-1-2">We work how you work everyday</h2>
-                    <p class="mb-2">
-                        Since the easiest things to use actually get used, we adapts to the way your team works – not
-                        the other way around.
-                    </p>
-                    <button class="btn-shedule">Get started free </button>
+                    <div class="description-advantage mb-5">
+                        <img src="./assets/Collaborative.png" alt="logo collaborative 1:1">
+                        <h3>Collaborative 1:1 </h3>
+                        <p>
+                            Build relationships by planning 1-on-1s and start meetings.
+                        </p>
+                    </div>
+
+                    <div class="description-advantage mb-5">
+                        <img src="./assets/Learning-center.png" alt="logo Learning-center">
+                        <h3>Learning Center</h3>
+                        <p>
+                            Quickly get solutions tailored to your personal challenges from the manager.
+                        </p>
+                    </div>
+
+                    <div class="description-advantage">
+                        <img src="./assets/Anonym-messaging.png" alt="logo anonymous messaging">
+                        <h3>Anonymous Messaging</h3>
+                        <p>
+                            Develop trust in a safe channel for important conversations.
+                        </p>
+                    </div>
+
+                    <div class="description-advantage">
+                        <img src="./assets/Conversation.png" alt="logo conversation engine">
+                        <h3>Conversation Engine</h3>
+                        <p>
+                            Communicate confidently with recommended talking points.
+                        </p>
+                    </div>
+
+                    <div class="description-advantage">
+                        <img src="./assets/Exclusive-manager.png" alt="logo exclusive manager">
+                        <h3>Team Surveys & Reports</h3>
+                        <p>
+                            Access manager tips, activities and best practices from our team of experts.
+                        </p>
+                    </div>
                 </div>
-                <img src="./assets/Shedule.png" alt="statistic of work" class="py-4">
+                <button class="btn-advantage">View more benefits</button>
             </div>
         </section>
+        <section id="charts">
+            <div class="grid-container grid grid-charts my-4">
+                <div class="get-started align-self-center pr-4">
+                    <h2 class="section-title mb-0-5">We work how you
+                        work everyday</h2>
+                    <p class="my-1">
+                        Since the easiest things to use actually get used, we adapts to the way your
+                        team works – not the other way around.
+                    </p>
+                    <button class="my-1 btn-charts">Get started free</button>
+                </div>
+                <div class="charts-wrapper"><img src="./assets/Shedule.png" alt="statistic of work" /></div>
+            </div>
+        </section>
+        <section id="testimonial">
+            <div class="grid-container grid grid-testimonial mt-5 mb-3 ">
+                <h2 class="justify-self-center section-title col-4 mb-3">Why customers love
+                    working with us</h2>
+                <p class="justify-self-center col-4 mb-3">“It's amazing what has helped me learn about my team.
+                    I don't worry about blindspots anymore, and 1-on-1s have never
+                    been more productive. The team loves it.”</p>
 
-        <section class="mb-6">
-            <div class="grid-container mb-6 review">
-                <h2 class="col-3 mt-6  text-center line-1-2 mb-3">Why customers love <br>working with us</h2>
-                <p class="col-3 text-center mb-3 ex-review">
-                    “It's amazing what has helped me learn about my team.<br>
-                    I don't worry about blindspots anymore, and 1-on-1s have never <br> been more productive. The team
-                    loves it.”</p>
-
-
-                <div class="border-top col-1 py-1-5 px-1 justify-self-center person click-btn">
-                    <img src="./assets/Jorge.png" alt="Jorge Robertson">
-
-                    <div class="">
+                <div class="col-sm-3 col-md-1 flex align-items-center py-1-5 border-top testimonial-item">
+                    <img class="mx-1" src="./assets/Jorge.png" alt="Jorge Robertson">
+                    <div>
                         <h3>Jorge Robertson</h3>
-                        <p class="job-title">CS at Google</p>
+                        <p>CS at Google</p>
                     </div>
                 </div>
-                <div class="col-1 py-1-5 px-1 justify-self-center person click-btn">
-                    <img src="./assets/Francisco.png" alt="Francisco Bell">
-                    <div class="">
+                <div class="col-sm-3 col-md-1 flex align-items-center py-1-5 testimonial-item">
+                    <img class="mx-1" src="./assets/Francisco.png" alt="Francisco Bell">
+                    <div>
                         <h3>Francisco Bell</h3>
-                        <p class="job-title">Designer at Microsoft</p>
+                        <p>Designer at Microsoft</p>
                     </div>
 
                 </div>
-                <div class="col-1 py-1-5 px-1 justify-self-center person click-btn">
-                    <img src="./assets/Beth.png" alt="Beth Fox">
+                <div class="col-sm-3 col-md-1 flex align-items-center py-1-5 testimonial-item">
+                    <img class="mx-1" src="./assets/Beth.png" alt="Beth Fox">
                     <div>
                         <h3>Beth Fox</h3>
-                        <p class="job-title">Developer at Airbnb</p>
+                        <p class="">Developer at Airbnb</p>
                     </div>
                 </div>
             </div>
-
-            <div class="grid-container stat-review">
-                <h2 class="col-1 py-4 px-5 percent-user">84% of employees who use trust their direct manager</h2>
-                <a href="#" class="py-4 justify-self-center align-self-center click-btn"><img
+        </section>
+        <section id="mobile-app">
+            <div class="grid-container grid stat-review mt-2 mb-6 px-5 align-items-center">
+                <h2 class="col-sm-5 col-3 py-4 percent-user">84% of employees who use trust their direct manager</h2>
+                <a href="#" class="col-sm-5 col-1 justify-self-center align-self-center click-btn btn-mb"><img
                         src="./assets/google-play.png" alt="button-google-play"></a>
-                <a href="#" class="py-4 justify-self-start align-self-center click-btn"><img src="./assets/Sign-app.png"
-                        alt="button-app-store"></a>
+                <a href="#" class="col-sm-5 col-1 justify-self-center align-self-center click-btn"><img
+                        src="./assets/Sign-app.png" alt="button-app-store"></a>
 
             </div>
-
         </section>
     </main>
-
-    <footer class="pt-5">
-        <div class="grid-container about-company click-btn">
-            <h3 class="title-footer">Company</h3>
-            <h3 class="title-footer">Support</h3>
-            <h3 class="title-footer">Legal</h3>
-            <h3 class="title-footer">Install App</h3>
-            <h3 class="subtitle-footer">About Us</h3>
-            <h3 class="subtitle-footer">Help Center</h3>
-            <h3 class="subtitle-footer">Cookies Policy</h3>
-            <a href="#" class="pb-1"><img src="./assets/google-foot.png" alt="logo google-play"></a>
-            <h3 class="subtitle-footer">Blog</h3>
-            <h3 class="subtitle-footer">Safety Center</h3>
-            <h3 class="subtitle-footer">Privacy Policy</h3>
-            <a href="#"><img src="./assets/app-foot.png" alt="logo app-store"></a>
-            <h3 class="subtitle-footer">Careers</h3>
-            <h3 class="subtitle-footer">Community</h3>
-            <h3 class="subtitle-footer">Terms of Service</h3>
-            <h3 class="subtitle-footer col-4 pb-5">Contact Us</h3>
+    <footer class="grid grid-footer">
+        <div class="main-footer grid grid-container py-5">
+            <div class="footer-dropdown">
+                <h3 class="title-footer bold click-btn">Company </h3>
+                <ul class="mf-hidden">
+                    <li>
+                        <a class="link-footer" href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="#">Careers</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-dropdown">
+                <h3 class="title-footer bold click-btn">Support</h3>
+                <ul class="mf-hidden">
+                    <li><a class="link-footer" href="#">Help Center</a></li>
+                    <li><a class="link-footer" href="#">Safety Center</a></li>
+                    <li><a class="link-footer" href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-dropdown">
+                <h3 class="title-footer bold click-btn">Legal</h3>
+                <ul class="mf-hidden">
+                    <li><a class="link-footer" href="#">Cookies Policy</a></li>
+                    <li><a class="link-footer" href="#">Privacy Policy</a></li>
+                    <li><a class="link-footer" href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="title-footer bold click-btn ">Install App</h3>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./assets/google-foot.png" alt="logo google-play"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./assets/app-foot.png" alt="logo app-store"></a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="wrapper-border-footer"></div>
-        <div class="grid-container logo click-btn">
-            <h3 class="justify-self-start pt-1-5 pb-2 subtitle-logo align-self-center">© 2020 - All rights reserved</h3>
+        <div class="secondary-footer grid-container">
+            <h3 class="justify-self-start pt-2 pb-2 subtitle-logo align-self-center">© 2020 - All rights reserved</h3>
             <div class="wrapper-logo justify-self-start py-1-5">
                 <img src="./assets/Insta.png" alt="logo-instagram" class="pr-1-5 " />
                 <img src="./assets/Ball.png" alt="logo-ball" class="pr-1-5" />
                 <img src="./assets/Twit.png" alt="logo-twitter" class="pr-1-5" />
                 <img src="./assets/Youtube.png" alt="logo-youtube" />
             </div>
-        </div>
 
+
+        </div>
     </footer>
 </body>
 
